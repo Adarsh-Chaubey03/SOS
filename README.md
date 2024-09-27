@@ -18,13 +18,13 @@ The 52°North SOS is a reference implementation of the
 It was implemented during the [OGC Web Services Testbed,  Phase 9 (OWS-9)](http://www.ogcnetwork.net/ows-9) 
 and tested to be compliant to this specification within the [OGC CITE testing](http://cite.opengeospatial.org/test_engine) in December of 2012.
 
-The 52°North SOS enables the user to:
+The 52°North SOS allows users to:
 
- - insert and retrieve georeferenced observation data
- - access georeferenced measurement data in a standardized format (ISO/OGC Observation and Measurement - O&M 2.0, OGC WaterML 2.0)
- - insert and retrieve sensor descriptions (encoded according to the OGC SensorML standard - SML 1.0.1, SML 2.0)
- - publish measurement data (near real-time, as well as archived data) 
-
+- Insert and retrieve georeferenced observation data
+- Access standardized georeferenced measurement data (O&M 2.0, WaterML 2.0)
+- Insert and retrieve sensor descriptions (SensorML 1.0.1, 2.0)
+- Publish near real-time and archived measurement data
+  
 An extension accommodates additional INSPIRE Directive requirements, thus ensuring interoperable exchange of any kind of observation data across political, administrative and organizational boundaries. Client applications, such as [Helgoland](http://www-neu.52north.org/software/software-projects/helgoland/) enable analysis and visualization of the measurement data provided via the SOS server.
  
 ### Features
@@ -43,13 +43,15 @@ An extension accommodates additional INSPIRE Directive requirements, thus ensuri
   
 ### Future work
 
-As of version 5.x, the 52N SOS's database model and DAO layer will be merged with the [52N Sensor Web Server Helgoland](https://github.com/52North/sensorweb-server-helgoland) to provide an easy-to-install and easy-to-configure service. This service will provide an OGC SOS 2.0 interface and 52N Sensor WEB REST-API to easily access the observed data via a restful interface.
+- **Version 5.x Updates**: The 52N SOS's database model and DAO layer will merge with the [52N Sensor Web Server Helgoland](https://github.com/52North/sensorweb-server-helgoland) for easier installation and configuration.
+  
+- **Interfaces**: The service will provide an OGC SOS 2.0 interface and a 52N Sensor WEB REST-API for easy data access via a RESTful interface.
 
-The database models of both services will be harmonized. A simple basic database model will provide the main features of the SOS and the Sensor WEB REST-API and will be easily extendable.
+- **Harmonized Database Models**: The database models of both services will be harmonized, featuring a simple, extendable basic model that supports core SOS and Sensor WEB REST-API functionalities.
 
-The Data Access Objects (DAO) layer will also be harmonized to provide a single point for accessing and manipulating the data in the database. This will reduce the maintenance and the SOS and the REST interface will easily support new database features.
+- **DAO Layer**: The DAO layer will be unified, simplifying data access and manipulation, reducing maintenance, and supporting new database features for both the SOS and REST interface.
 
-In the [Sensor Web Server database model](https://github.com/52North/sensorweb-server-db-model) the harmonized database model and the DAO layer will be provided as a separate project for use in the future 52N SOS and 52N Sensor WEB REST-API implementations. Additionally the [52N Sensor Web Server Helgoland Adapters](https://github.com/52North/sensorweb-server-helgoland-adapters) will also use this project to persist the metadata of the harvested SOS services. 
+- **Future Use**: In the [Sensor Web Server database model](https://github.com/52North/sensorweb-server-db-model) the harmonized database model  and DAO layer will be available as a separate project for future implementations of 52N SOS and 52N Sensor WEB REST-API. The [52N Sensor Web Server Helgoland Adapters](https://github.com/52North/sensorweb-server-helgoland-adapters) will also utilize this project for persisting metadata of harvested SOS services.
 
 ## Quick Start
 
@@ -112,9 +114,9 @@ The development the 52°North Sensor Observation Service implementations was con
 
 | Name | Organisation |
 | ------------- | :-------------: |
-| [Carsten Hollmann](https://52north.org/about-us/profile/) | [52&deg;North](http://52north.org) |
-| [Eike Hinderk J&uuml;rrens](https://52north.org/about-us/profile/) | [52&deg;North](http://52north.org) |
-| [Christian Autermann](https://52north.org/about-us/profile/) | [52&deg;North](http://52north.org) |
+| Carsten Hollmann | [52&deg;North](http://52north.org) |
+| Eike Hinderk J&uuml;rrens | [52&deg;North](http://52north.org) |
+| Christian Autermann | [52&deg;North](http://52north.org) |
 | Christoph Stasch| [52&deg;North](http://52north.org) |
 | Shane StClair | [Axiom Data Science](http://www.axiomdatascience.com) |
 | Victor Gonz&aacute;lez | [geomati.co](http://geomati.co/en) |
